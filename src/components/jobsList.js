@@ -11,7 +11,8 @@ export default class JobsList extends React.Component {
     	  "company": "Schneider Electric", 
     	  "salary": 4.5,
     	  "city": "Bogotá, Colombia",
-        "date": "2019-03-26"
+        "date": "2019-03-26",
+        "views":2
       }, 
       {
         "id": "0002",
@@ -19,7 +20,8 @@ export default class JobsList extends React.Component {
         "company": "Google Inc.", 
         "salary": 20,
         "city": "Palo Alto, CA, USA",
-        "date": "2019-03-27"
+        "date": "2019-03-27",
+        "views":32
       },
       {
         "id": "0003",
@@ -27,7 +29,8 @@ export default class JobsList extends React.Component {
         "company": "Clínica La Aurora", 
         "salary": 1,
         "city": "Cali, Colombia",
-        "date": "2019-03-28"
+        "date": "2019-03-28",
+        "views":1542
       }
     ]
   };
@@ -44,6 +47,7 @@ export default class JobsList extends React.Component {
               <th scope="col">Salary</th>
               <th scope="col">Ciudad</th>
               <th scope="col">Publicacition date</th>
+              <th scope="col">Views</th>
             </tr>
           </thead>
           <tbody>

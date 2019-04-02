@@ -10,9 +10,18 @@ export default class Job extends React.Component {
   		return (
   			<tr>
   				<th scope="row">{this.props.offer.id}</th>
-      			<td>{this.props.offer.name}</td>
+      			<td><FormattedMessage id={this.props.offer.name}/></td>
   				<td>{this.props.offer.company}</td>
-      			<td><FormattedMessage
+      			<td>{navigator.language.split('-')[0] === "es" && <FormattedMessage
+                    id="salary"
+    defaultMessage='{name,number} {name, plural,
+                      one {millon}
+                      other {millones}
+                    }'
+    values={{
+        name: this.props.offer.salary
+    }}
+                />}{navigator.language.split('-')[0] === "en" && <FormattedMessage
                     id="salary"
     defaultMessage='{name,number} {name, plural,
                       one {million}
@@ -21,7 +30,7 @@ export default class Job extends React.Component {
     values={{
         name: this.props.offer.salary
     }}
-                /></td>
+                />}</td>
       			<td>{this.props.offer.city}</td>
       			<td>  <FormattedDate
     value={new Date(this.props.offer.date)}
